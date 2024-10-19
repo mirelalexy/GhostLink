@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons'; // For the icon in the button
 
 export default function App() {
@@ -15,7 +15,9 @@ export default function App() {
 
       {/* Danger Button */}
       <TouchableOpacity style={styles.dangerButton}>
-        <FontAwesome name="warning" size={24} color="white" />
+      <Image
+          source={require('../../assets/images/danger-icon.png')} // Import and use the PNG
+        />
       </TouchableOpacity>
     </View>
   );
@@ -33,23 +35,23 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white',
     position: 'absolute',
-    top: 100, // Adjust this to move the logo to the top
+    top: 65, // Adjust this to move the logo to the top
   },
   mapContainer: {
-    width: 300,
-    height: 300,
+    width: 375,
+    height: 375,
     backgroundColor: '#D3D3D3', // Light gray background as a placeholder
-    borderRadius: 15, // Slight rounded corners
+    borderRadius: 10, // Slight rounded corners
     marginVertical: 20,
   },
   dangerButton: {
     position: 'absolute',
     bottom: 40,
     right: 30,
-    backgroundColor: '#FF0000', // Red background color for the button
-    borderRadius: 50, // Round button
-    width: 60,
-    height: 60,
+    backgroundColor: '#9F1D1D', // Red background color for the button
+    borderRadius: 10, // Round button
+    width: 65,
+    height: 65,
     alignItems: 'center',
     justifyContent: 'center',
   },
